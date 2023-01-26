@@ -1,59 +1,19 @@
 :root {
-  --sandbox: #a76fec;
-  --waiting: #6fbeec;
-  --progress: #FFBF00;
-  --done: #BFDB38;
-  --darker: #22252b;
-  --lem-dark: #282c34;
-  --lem-dark-light: #2b303b;
-
-
-  --lem-warning: #9f7313;
+  --exporter-darker: #22252b;
+  --exporter-dark: #2d313b;
+  --exporter-dark-light: #3b4252;
 }
 
-.bg-lem-dark-light {
-  background-color: var(--lem-dark-light);
+.bg-exporter-dark-light {
+  background-color: var(--exporter-dark-light);
 }
 
-.bg-darker {
-  background-color: var(--darker);
+.bg-exporter-darker {
+  background-color: var(--exporter-darker);
 }
 
-.bg-lem-dark {
-  background-color: var(--lem-dark);
-}
-
-.bg-sandbox {
-  background-color: var(--sandbox);
-}
-
-.bg-waiting {
-  background-color: var(--waiting);
-}
-
-.bg-progress {
-  background-color: var(--progress);
-}
-
-.bg-done {
-  background-color: var(--done);
-}
-
-.btn-lem-waring {
-  --bs-btn-color: #000;
-  --bs-btn-bg: var(--lem-warning);
-  --bs-btn-border-color: var(--lem-warning);
-  --bs-btn-hover-color: #000;
-  --bs-btn-hover-bg: var(--lem-warning);
-  --bs-btn-hover-border-color: var(--lem-warning);
-  --bs-btn-focus-shadow-rgb: 217,164,6;
-  --bs-btn-active-color: #000;
-  --bs-btn-active-bg: var(--lem-warning);
-  --bs-btn-active-border-color: var(--lem-warning);
-  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: #000;
-  --bs-btn-disabled-bg: var(--lem-warning);
-  --bs-btn-disabled-border-color: var(--lem-warning);
+.bg-exporter-dark {
+  background-color: var(--exporter-dark);
 }
 
 body {

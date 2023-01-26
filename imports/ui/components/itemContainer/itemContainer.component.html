@@ -1,0 +1,21 @@
+<template name="exportItemsContainer">
+    <article class="h-100">
+        <section class="h-100 d-flex flex-column">
+            <header
+                    class="d-flex rounded-top p-2 justify-content-between align-items-center"
+                    style="background-color: {{ itemContainerData.backgroundColor }}; height: 54px">
+                <h4 class="m-0 text-white">{{ itemContainerData.title }} ( {{ getExportItemsCounts }} / {{ amount }} )</h4>
+            </header>
+            <div
+                    class="bg-light flex-grow-1 rounded-bottom p-3 px-auto d-flex flex-wrap {{itemContainerData.justifyContent}}"
+                    style="height: 300px; column-gap: 2.5rem; row-gap: 0.5rem; overflow-y: auto">
+                {{#each getExportItems}}
+                    <div class="d-flex justify-content-center align-items-center">
+                        {{>exportComponent }}
+                    </div>
+                {{/each}}
+            </div>
+        </section>
+    </article>
+</template>
+

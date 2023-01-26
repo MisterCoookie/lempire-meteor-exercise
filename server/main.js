@@ -15,7 +15,7 @@ Meteor.startup(() => {
         })
     }
 
-    setInterval(() => {
-        // console.log('Hello')
+    Meteor.setInterval(() => {
+        Meteor.call('exports.progressExporting')
     }, 1000)
 });

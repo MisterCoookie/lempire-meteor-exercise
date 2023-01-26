@@ -1,9 +1,40 @@
 <template name="AppPage">
-    <button id="addTaskButton" class="btn btn-primary">Add export</button>
-    <article></article>
-    <article></article>
-    <article></article>
-    {{#each exports}}
-        {{>exportComponent }}
-    {{/each}}
+    <div class="mb-3 d-flex gap-3">
+        <button
+                id="addTaskButton"
+                class="btn text-white mb-0"
+                style="background-color: #ce6933"
+        >Add file to export in the sandbox</button>
+        <button id="launchExportButton" class="btn bg-primary text-white" style="height: 38px">
+            {{#if isExporting}}
+                You need to wait that the current export end
+            {{else}}
+                Start exporting your files !
+            {{/if}}
+        </button>
+    </div>
+    {{> exportItemsContainer itemContainerData=exportItemContainer.SANDBOX }}
+    {{#if isExporting}}
+            <div class="my-3 d-flex justify-content-center gap-3">
+                {{#if isExportEnded }}
+                    <button id="validateButton" class="btn btn-success">
+                        Valid Export
+                    </button>
+                {{/if}}
+            </div>
+        <article class="d-flex justify-content-between" style="height: 750px">
+            <div style="width: 30%">
+                {{> exportItemsContainer itemContainerData=exportItemContainer.WAITING }}
+            </div>
+            <div style="width: 30%">
+                {{> exportItemsContainer itemContainerData=exportItemContainer.EXPORTING }}
+            </div>
+            <div style="width: 30%">
+                {{> exportItemsContainer itemContainerData=exportItemContainer.VALIDATING }}
+            </div>
+        </article>
+    {{/if}}
+    <article class="mt-3">
+        {{> exportItemsContainer itemContainerData=exportItemContainer.ENDED }}
+    </article>
 </template>
