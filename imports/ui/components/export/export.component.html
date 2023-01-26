@@ -1,8 +1,15 @@
+<!--
+Created by: ELISABETH Nathanaël
+Created at: 2023-27-01
+-->
+
 <template name="exportComponent">
     <div class="d-flex flex-column bg-exporter-dark rounded" style="width: fit-content; height: fit-content">
+        <!--Item header-->
         <div class="bg-exporter-dark-light p-2 rounded-top">
             <p class="m-0 text-white">{{ name }}</p>
         </div>
+        <!--Item body-->
         <div class="p-2 d-flex flex-column gap-2">
             {{#if isExporting }}
                 <div class="bg-white rounded" style="width: 300px; height: 32px">

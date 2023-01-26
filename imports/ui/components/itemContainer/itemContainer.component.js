@@ -1,21 +1,17 @@
-import {EXPORT_STATE, ExportCollection} from "../../../db/export.collection";
-import {ReactiveDict} from "meteor/reactive-dict";
+/**
+ * Created by: ELISABETH Nathanaël
+ * Created at: 2023-27-01
+ */
 
+// Internal imports
+import { ExportCollection } from "../../../db/export.collection";
+
+// Blaze template import
 import './itemContainer.component.html'
 
-const IS_LOADING_STRING = 'IS_LOADING_STRING'
-Template.exportItemsContainer.onCreated(function exportItemsContainerOnCreated() {
-    this.reactiveDict = new ReactiveDict();
-
-    const handler = Meteor.subscribe('exports');
-    Tracker.autorun(() => {
-        this.reactiveDict.set(IS_LOADING_STRING, !handler.ready());
-    })
-})
-
+// Template setup
 Template.exportItemsContainer.helpers({
     getExportItems() {
-        console.log(this.itemContainerData)
         return ExportCollection.find({state: this.itemContainerData.exportState });
     },
     getExportItemsCounts() {

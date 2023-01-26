@@ -1,30 +1,30 @@
-import { Template } from 'meteor/templating';
-import { ReactiveDict } from 'meteor/reactive-dict';
+/**
+ * Created by: ELISABETH Nathanaël
+ * Created at: 2023-27-01
+ */
 
-import './export.component.html'
+// Meteor imports
+import { Template } from 'meteor/templating';
+
+// Internal imports
 import {EXPORT_STATE} from "../../../db/export.collection";
 
-const PERCENT_LOADING_STRING = 'PERCENT_LOADING_STRING'
+// Blaze template import
+import './export.component.html'
 
-Template.exportComponent.onCreated(function exportComponentOnCreated() {
-    this.reactiveDict = new ReactiveDict();
-    this.reactiveDict.set(PERCENT_LOADING_STRING, 0)
-})
-
-
+// Template setup
 Template.exportComponent.helpers({
     getPercent() {
         return this.percent + '%'
     },
     getText() {
+        // Used to return text by checking the current state of the export
         switch (this.state) {
             case EXPORT_STATE.SANDBOX:
                 return "In Sandbox";
             case EXPORT_STATE.WAITING:
                 return "Waiting";
-            case EXPORT_STATE.VALIDATING:
-                return this.url;
-            case EXPORT_STATE.ENDED:
+            default:
                 return this.url;
         }
     },

@@ -1,4 +1,10 @@
+<!--
+Created by: ELISABETH Nathanaël
+Created at: 2023-27-01
+-->
+
 <template name="AppPage">
+    <!-- Buttons for Sandbox -->
     <div class="mb-3 d-flex gap-3">
         <button
                 id="addTaskButton"
@@ -13,7 +19,11 @@
             {{/if}}
         </button>
     </div>
-    {{> exportItemsContainer itemContainerData=exportItemContainer.SANDBOX }}
+    <!-- Sandbox of exporting item -->
+    <div style="height: 300px;">
+        {{> exportItemsContainer itemContainerData=exportItemContainer.SANDBOX }}
+    </div>
+    <!-- Exporting items part -->
     {{#if isExporting}}
             <div class="my-3 d-flex justify-content-center gap-3">
                 {{#if isExportEnded }}
@@ -34,6 +44,7 @@
             </div>
         </article>
     {{/if}}
+    <!-- Exported items list -->
     <article class="mt-3">
         {{> exportItemsContainer itemContainerData=exportItemContainer.ENDED }}
     </article>

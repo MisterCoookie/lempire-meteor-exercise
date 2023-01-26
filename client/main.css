@@ -1,3 +1,6 @@
+/**
+Setup some css variable for an easy use in the app
+ */
 :root {
   --exporter-darker: #22252b;
   --exporter-dark: #2d313b;

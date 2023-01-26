@@ -1,5 +1,12 @@
+/**
+ * Created by: ELISABETH Nathanaël
+ * Created at: 2023-27-01
+ */
+
+// Internal imports
 import {EXPORT_STATE} from "../../../db/export.collection";
 
+// Export all containers settings
 export const EXPORT_ITEMS_CONTAINERS = {
     'SANDBOX': {
         title: 'List export Sandbox',
