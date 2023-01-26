@@ -1,0 +1,9 @@
+<template name="AppPage">
+    <button id="addTaskButton" class="btn btn-primary">Add export</button>
+    <article></article>
+    <article></article>
+    <article></article>
+    {{#each exports}}
+        {{>exportComponent }}
+    {{/each}}
+</template>

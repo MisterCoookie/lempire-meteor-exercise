@@ -1,0 +1,17 @@
+<template name="exportComponent">
+    <div class="d-flex flex-column bg-lem-dark rounded" style="width: fit-content">
+        <div class="bg-lem-dark-light p-2 rounded-top">
+            <p class="m-0 text-white">{{ name }}</p>
+        </div>
+        <div class="p-3">
+            <p class="m-0 text-white">Exporting</p>
+            <div class="bg-white rounded" style="width: 250px; height: 20px">
+                <div class="bg-info rounded" style="width: {{ percent }}; height: 20px"></div>
+            </div>
+        </div>
+        <div class="p-3">
+            <button class="btn btn-lem-waring py-1 text-white" style="width: fit-content; font-size: 14px">Cancel</button>
+            <button id="deleteExportButton" class="btn btn-danger py-1" style="width: fit-content; font-size: 14px">Remove</button>
+        </div>
+    </div>
+</template>
