@@ -11,6 +11,7 @@ jobs:
     steps:
       - uses: actions/setup-node@v3
       - name: Use Node.js 14.21.2
+        uses: actions/setup-node@v3
         with:
           node-version: "14.21.2"
       - run: "curl https://install.meteor.com/ | sh"
