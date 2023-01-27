@@ -37,7 +37,7 @@ export const EXPORT_ITEMS_CONTAINERS = {
         exportState: EXPORT_STATE.VALIDATING
     },
     'ENDED': {
-        title: 'List export Sandbox',
+        title: 'List exported',
         amount: -1,
         backgroundColor: '#6A59FF',
         justifyContent: 'justify-content-start',
