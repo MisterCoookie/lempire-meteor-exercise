@@ -1,4 +1,5 @@
 import assert from "assert";
+import '../imports/api/export.tests.js';
 
 describe("lem-export-exercise", function () {
   it("package.json has correct name", async function () {

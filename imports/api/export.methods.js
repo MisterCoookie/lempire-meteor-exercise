@@ -3,11 +3,14 @@
  * Created at: 2023-27-01
  */
 
+// Meteor imports
+import { Random } from 'meteor/random';
+
 // External imports
 import {faker} from "@faker-js/faker";
 
 // Internal imports
-import {EXPORT_STATE, ExportCollection, getRandomFinalUrl} from "../db/export.collection";
+import { EXPORT_FINAL_URLS, EXPORT_STATE, ExportCollection } from "../db/export.collection";
 
 /**
  * Setup methods for export to be used all around the app
@@ -25,7 +28,7 @@ Meteor.methods({
     // When an exported item is ready to go in the validating list
     'exports.setValidatingState'(exportingId) {
         // Set Item in validating state
-        ExportCollection.update(exportingId, { $set: { state: EXPORT_STATE.VALIDATING, url: getRandomFinalUrl() }})
+        ExportCollection.update(exportingId, { $set: { state: EXPORT_STATE.VALIDATING, url: Random.choice(EXPORT_FINAL_URLS) }})
 
         // Get an exporting item left in the waiting list
         const waitingItem = ExportCollection.findOne({state: EXPORT_STATE.WAITING})
