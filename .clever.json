@@ -1,0 +1,11 @@
+{
+  "apps": [
+    {
+      "app_id": "app_a50fef8e-22c9-448d-a252-04b1ac41e98d",
+      "org_id": "user_81860a24-ae74-471e-b9f1-e0fe3d49651f",
+      "deploy_url": "https://push-n2-par-clevercloud-customers.services.clever-cloud.com/app_a50fef8e-22c9-448d-a252-04b1ac41e98d.git",
+      "name": "lempire-meteor-exercise",
+      "alias": "lempire-meteor-exercise"
+    }
+  ]
+}
