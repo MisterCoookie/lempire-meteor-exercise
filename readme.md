@@ -35,6 +35,21 @@ To launch unit test of the application you need to do the following command
 ```
 npm run test
 ```
+
+## Deploy on your
+Meteor cloud
+```
+meteor deploy nathanael-lempire-exercise.meteorapp.com --free --mongo
+```
+
+## Github Actions
+I put test on github actions
+```
+git tag deploy/1.0.x
+git push -u origin deploy/1.0.x
+```
+> replace x by the version you want to set
+
 # Author
 ELSIABETH Nathanaël
 2023-01-27
